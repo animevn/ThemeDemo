@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:keep="@menu/menu_main">
+
+    <item
+        android:id="@+id/mniTheme"
+        android:title="@string/mniTheme"
+        app:showAsAction="ifRoom" />
+</menu>
