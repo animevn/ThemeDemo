@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import butterknife.BindView;
@@ -39,11 +41,28 @@ public class MainActivity extends AppCompatActivity {
     private static final String SCORE1 = "score1";
     private static final String SCORE2 = "score2";
 
+    private void loadInstanceState(Bundle bundle){
+        if (bundle != null){
+            score1 = bundle.getInt(SCORE1);
+            score2 = bundle.getInt(SCORE2);
+            tvScore1.setText(String.format("%s", score1));
+            tvScore2.setText(String.format("%s", score2));
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        loadInstanceState(savedInstanceState);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(SCORE1, score1);
+        outState.putInt(SCORE2, score2 );
     }
 
     @OnClick({R.id.bnMinus1, R.id.bnPlus1, R.id.bnMinus2, R.id.bnPlus2})
