@@ -1,4 +1,4 @@
-package com.haanhgs.app.themedemo;
+package com.haanhgs.app.uitheme;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
-        int id = item.getItemId();
+//        int id = item.getItemId();
         //to change to darkmode , need to change style to this line in styles.xml
         //<style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
         int dark = AppCompatDelegate.getDefaultNightMode();

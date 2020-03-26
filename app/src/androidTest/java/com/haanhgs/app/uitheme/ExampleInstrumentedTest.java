@@ -1,4 +1,4 @@
-package com.haanhgs.app.themedemo;
+package com.haanhgs.app.uitheme;
 
 import android.content.Context;
 
