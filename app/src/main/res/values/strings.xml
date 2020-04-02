@@ -7,4 +7,6 @@
     <string name="score1">0</string>
     <string name="description">Error</string>
     <string name="mniTheme" tools:keep="@string/mniTheme">Change Theme</string>
+    <string name="plus">Button Plus</string>
+    <string name="minus">Button Minus</string>
 </resources>
